@@ -1,0 +1,28 @@
+html, body {
+  margin: 0;
+  height: 100%
+}
+
+body {
+  font-family: "Helvetica", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+body > div {
+  display: flex;
+}
+
+section {
+  margin: 0.5em;
+  width: 200px;
+  height: 200px;
+  border: 1px solid #000000;
+}
+
+section input {
+  border: 1px solid #000000;
+  padding: 0.5em;
+}
