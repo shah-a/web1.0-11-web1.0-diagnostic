@@ -1,28 +1,49 @@
-const widthDisplay = document.querySelector("width");
-const heightDisplay = document.querySelector("height");
-const colorDisplay = document.querySelector("color");
-const boxDisplay = document.querySelector("color-box");
+const widthInput = document.querySelector("#width-input");
+const heightInput = document.querySelector("#height-input");
+const colorInput = document.querySelector("#color-input");
 
-function updateValue(property) {
+const widthDisplay = document.querySelector("#width-display");
+const heightDisplay = document.querySelector("#height-display");
+const colorDisplay = document.querySelector("#color-display");
+const boxDisplay = document.querySelector("#color-box");
 
+function updateWidth() {
+  const widthValue = widthInput.value;
+  widthDisplay.innerHTML = `${widthValue}px`;
+}
+function updateHeight() {
+  const heightValue = heightInput.value;
+  heightDisplay.innerHTML = `${heightValue}px`;
 }
 
-function updateBoxSize(width, height) {
-
+function updateColor() {
+  const colorValue = colorInput.value;
+  colorDisplay.innerHTML = `${colorValue}`;
 }
 
-function updateBoxColor(color) {
-
+function updateBoxSize() {
+  const width = parseInt(widthInput.value);
+  const height = parseInt(heightInput.value);
+  boxDisplay.style.width = `${width}px`;
+  boxDisplay.style.height = `${height}px`;
 }
 
-widthDisplay.addEventListener("change", () => {
-  updateValue();
+function updateBoxColor() {
+  const color = colorInput.value;
+  boxDisplay.style.backgroundColor = `${color}`;
+}
+
+widthInput.addEventListener("input", () => {
+  updateWidth();
   updateBoxSize();
 })
 
-heightDisplay.addEventListener("change", () => {
-  updateValue();
+heightInput.addEventListener("input", () => {
+  updateHeight();
   updateBoxSize();
 })
 
-colorDisplay.addEventListener("change", updateBoxColor);
+colorInput.addEventListener("input", () => {
+  updateColor();
+  updateBoxColor();
+})
