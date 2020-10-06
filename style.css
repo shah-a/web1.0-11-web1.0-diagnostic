@@ -17,6 +17,7 @@ body > div {
 
 section {
   margin: 0.5em;
+  padding: 0.5em;
   width: 200px;
   height: 200px;
   border: 1px solid #000000;
