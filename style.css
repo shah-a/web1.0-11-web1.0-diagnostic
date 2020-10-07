@@ -1,3 +1,10 @@
+/*Colour palette: https://colorhunt.co/palette/213547
+#eeeeee
+#686d76
+#373a40
+#19d3da
+*/
+
 html, body {
   margin: 0;
   height: 100%
@@ -9,10 +16,20 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: #686d76;
+  background-color: #eeeeee;
 }
 
 body > div {
   display: flex;
+}
+
+#name h1 {
+  color: #19d3da;
+}
+
+#output-1 h1, #output-2 h1 {
+  color: #373a40;
 }
 
 section {
@@ -20,17 +37,37 @@ section {
   padding: 0.5em;
   width: 200px;
   height: 200px;
-  border: 1px solid #000000;
+  border: 1px solid #373a40;
 }
 
-section input {
+#name h1, #name p {
+  margin: 0;
+  padding: 0.5rem;
+}
+
+#name, #inputs, #output-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#inputs label {
+  color: #000000;
+  padding: 0.35em;
+}
+
+#inputs input {
   border: 1px solid #000000;
   padding: 0.5em;
+}
+
+#output-1 h1, #output-1 p {
+  margin: 0;
 }
 
 #color-box {
   width: 100px;
   height: 100px;
-  background-color: #000000;
+  background-color: #19d3da;
   transition: all 0.2s;
 }
